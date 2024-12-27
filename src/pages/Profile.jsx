@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import Context from '../context/context'
+import Context from '../context/AuthContext'
 import axios from 'axios'
 import MyBlogs from '../Components/MyBlogs'
 import { FaUserCircle } from "react-icons/fa";

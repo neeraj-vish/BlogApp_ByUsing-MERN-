@@ -6,7 +6,7 @@ import Login from './pages/Login'
 import Profile from './pages/Profile'
 import Register from './pages/Register'
 import Navbar from './Components/Navbar'
-import Context from './context/context'
+import Context from './context/AuthContext'
 
 
 const App = () => {
