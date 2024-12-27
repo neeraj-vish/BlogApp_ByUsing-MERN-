@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+body{
+  background-color: black;
+  color: white;
+}
+
+/* Navbar Styling */
+
+.navbar{
+  background-color: blue;
+  padding: 10px;
+  
+}
+
+
+.left{
+  text-decoration: none;
+  color: white;
+}
+
+
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items{
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+
+.items:hover{
+  background-color: black;
+  color: white;
+}
+
+
+/* Registration */
+
+.container{
+  width: 45%;
+}
