@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const api = await axios.get(`https://mern-2024-api-7tat.onrender.com/api/blogs/allblogs`, {
+        const api = await axios.get(`https://mern-2024-api-7tat.onrender.com/api/blogs/allblogs`, { timeout: 10000 },{
           headers: {
             "Content-Type": "application/json",
           },
@@ -59,3 +59,4 @@ const Home = () => {
 }
 
 export default Home
+
