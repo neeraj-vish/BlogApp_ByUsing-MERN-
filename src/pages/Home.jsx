@@ -5,23 +5,25 @@ import UserDetails from '../Components/UserDetails'
 const Home = () => {
   const [blog,setBlog]=useState([])
 
-
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const response = await fetch('/api/data');
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const api = await axios.get(`https://mern-2024-api-7tat.onrender.com/api/blogs/allblogs`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        });
+        setBlog(api.data.blogs);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+        setBlog([]);
       }
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error('Fetch error:', error);
-    }
-  };
-
-  fetchData();
-}, []);
+    };
+  
+    fetchData();
+  }, []);
+  
 
   return (
     <>
